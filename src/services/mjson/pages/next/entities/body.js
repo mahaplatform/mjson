@@ -2,18 +2,15 @@ import PropTypes from 'prop-types'
 import Children from './children'
 import React from 'react'
 
-class Page extends React.Component {
+class Body extends React.Component {
 
   static propTypes = {
-    config: PropTypes.object
+    config: PropTypes.object,
   }
 
   render() {
-    const { config, foundation } = this.props
     return (
-      <>
-        <Children { ...this._getChildren() } />
-      </>
+      <Children { ...this._getChildren() } />
     )
   }
 
@@ -26,4 +23,4 @@ class Page extends React.Component {
 
 }
 
-export default Page
+export default Body

@@ -5,12 +5,12 @@ import React from 'react'
 class Email extends React.Component {
 
   static propTypes = {
-    config: PropTypes.object,
+    email: PropTypes.object,
     foundation: PropTypes.string
   }
 
   render() {
-    const { config, foundation } = this.props
+    const { email, foundation } = this.props
     return (
       <>
         <style dangerouslySetInnerHTML={{ __html: foundation }} />
@@ -28,9 +28,9 @@ class Email extends React.Component {
   }
 
   _getChildren() {
-    const { config } = this.props
+    const { email } = this.props
     return {
-      children: config.content.children
+      children: email.content.children
     }
   }
 
