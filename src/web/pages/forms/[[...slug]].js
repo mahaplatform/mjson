@@ -1,4 +1,4 @@
-import Form from '../../../services/mjson/pages/next/form'
+import Form from '../../../mjson/next/pages/form'
 import fetchData from '../../lib/fetch'
 
 export default function Document(props) {
@@ -14,9 +14,11 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { slug } = context.params
+  const layout = await fetchData(`forms/${slug[0]}/layout`)
   const form = await fetchData(`forms/${slug[0]}`)
   return {
     props: {
+      layout,
       form
     }
   }

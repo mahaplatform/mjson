@@ -6,7 +6,7 @@ const config = withLess({
     const index = config.module.rules.findIndex(rule => {
       return rule.oneOf !== undefined
     })
-    config.module.rules[index].oneOf[2].include.unshift(path.resolve('src','services','mjson'))
+    config.module.rules[index].oneOf[2].include.unshift(path.resolve('src','mjson'))
     return config
   }
 })

@@ -1,5 +1,5 @@
-import Product from '../../../services/mjson/pages/next/product'
-import Store from '../../../services/mjson/pages/next/store'
+import Product from '../../../mjson/next/pages/product'
+import Store from '../../../mjson/next/pages/store'
 import fetchData from '../../lib/fetch'
 
 export default function Document(props) {

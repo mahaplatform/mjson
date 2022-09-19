@@ -1,4 +1,4 @@
-import renderEmail from '../../services/mjson/emails/html'
+import renderEmail from '../../mjson/ejs/emails'
 
 import path from 'path'
 import fs from 'fs'

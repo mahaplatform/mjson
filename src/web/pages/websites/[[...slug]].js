@@ -1,4 +1,4 @@
-import Page from '../../../services/mjson/pages/next/page'
+import Page from '../../../mjson/next/pages/page'
 import fetchData from '../../lib/fetch'
 
 export default function Document(props) {

@@ -1,5 +1,3 @@
 export default {
-  meta: {
-    title: 'foo'
-  }
+  title: 'foo'
 }
