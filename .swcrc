@@ -1,0 +1,13 @@
+{
+  "jsc": {
+    "parser": {
+      "syntax": "ecmascript",
+      "exportDefaultFrom": true,
+      "exportNamespaceFrom": true
+    },
+    "target": "es5"
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}

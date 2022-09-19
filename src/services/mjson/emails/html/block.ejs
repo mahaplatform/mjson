@@ -1,0 +1,25 @@
+<% if(config.styles.margin) { -%>
+<table>
+  <tbody>
+    <tr>
+      <td style="padding:10px">
+<% } -%>
+<% if(config.styles.padding) { -%>
+        <table>
+          <tbody>
+            <tr>
+              <td style="padding:10px">
+<% } -%>
+                <%- include(`${includePath}/block/${config.type}`, { config }) -%>
+<% if(config.styles.padding) { -%>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+<% } -%>
+<% if(config.styles.margin) { -%>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<% } -%>

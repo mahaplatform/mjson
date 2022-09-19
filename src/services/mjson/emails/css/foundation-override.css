@@ -1,0 +1,8 @@
+table.collapse > tbody > tr > th.columns {
+  padding-bottom: 0;
+}
+@media only screen and (max-width: 596px) {
+  table.body table.container {
+    width: 100% !important;
+  }
+}

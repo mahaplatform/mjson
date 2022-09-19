@@ -1,0 +1,9 @@
+<% children.map((child, index) => { -%>
+<%- include(`${includePath}/entity`, {
+  includePath,
+  parent,
+  config: child,
+  index,
+  total: children.length
+}) -%>
+<% }) -%>

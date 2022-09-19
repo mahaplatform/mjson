@@ -1,0 +1,9 @@
+<table align="center" class="container" id="<%- config.id %>">
+  <tbody>
+    <tr>
+      <td>
+        <%- include(`${includePath}/children`, { includePath, parent: config, children: config.content.children }) -%>
+      </td>
+    </tr>
+  </tbody>
+</table>

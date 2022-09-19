@@ -1,0 +1,25 @@
+<%
+const getSize = (layout, index, screen) => {
+  if(screen === 'desktop') {
+    const columns = layout.desktop ? layout.desktop : layout
+    const width = columns[index % columns.length]
+    return `large-${width}`
+  }
+  if(screen === 'mobile') {
+    const columns = layout.mobile ? layout.mobile : layout
+    const width = columns[index % columns.length]
+    return `small-${width}`
+  }
+}
+const getClass = (layout, index, total) => {
+  const classes = ['columns']
+  if(index === 0) classes.push('first')
+  if(index === total - 1) classes.push('last')
+  classes.push(getSize(layout, index, 'mobile'))
+  classes.push(getSize(layout, index, 'desktop'))
+  return classes.join(' ')
+}
+-%>
+<th class="<%- getClass(parent.content.layout, index, total) %>" id="<%- config.id %>">
+  <%- include(`${includePath}/children`, { includePath, parent: config, children: config.content.children }) -%>
+</th>

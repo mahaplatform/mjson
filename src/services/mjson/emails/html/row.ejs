@@ -1,0 +1,8 @@
+<table class="row collapse" id="<%- config.id %>">
+  <tbody>
+    <tr>
+      <%- include(`${includePath}/children`, { includePath, parent: config, children: config.content.children }) -%>
+      <th class="expander"></th>
+    </tr>
+  </tbody>
+</table>
