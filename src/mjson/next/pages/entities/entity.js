@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import Section from './section'
+import Dynamic from './dynamic'
 import Column from './column'
 import Block from './block'
 import React from 'react'
@@ -25,6 +26,7 @@ class Entity extends React.Component {
     if(config.entity === 'row') return Row
     if(config.entity === 'column') return Column
     if(config.entity === 'block') return Block
+    if(config.entity === 'dynamic') return Dynamic
   }
 
 }

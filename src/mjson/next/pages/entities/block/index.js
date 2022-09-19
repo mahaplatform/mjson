@@ -1,6 +1,10 @@
 import PropTypes from 'prop-types'
+import Search from './search'
+import Image from './image'
 import Text from './text'
 import React from 'react'
+import Form from './form'
+import Cart from './cart'
 
 class Block extends React.Component {
 
@@ -14,8 +18,12 @@ class Block extends React.Component {
   }
 
   _getComponent() {
-    const { config } = this.props
-    if(config.type === 'text') return Text
+    const { type } = this.props.config
+    if(type === 'search') return Search
+    if(type === 'image') return Image
+    if(type === 'text') return Text
+    if(type === 'form') return Form
+    if(type === 'cart') return Cart
   }
 
 

@@ -5,7 +5,6 @@ import React from 'react'
 class Form extends React.Component {
 
   static propTypes = {
-    layout: PropTypes.object,
     form: PropTypes.object
   }
 
@@ -16,9 +15,9 @@ class Form extends React.Component {
   }
 
   _getBody() {
-    const { layout } = this.props
+    const { form } = this.props
     return {
-      config: layout
+      config: form
     }
   }
 

@@ -14,11 +14,9 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const { slug } = context.params
-  const layout = await fetchData(`forms/${slug[0]}/layout`)
   const form = await fetchData(`forms/${slug[0]}`)
   return {
     props: {
-      layout,
       form
     }
   }

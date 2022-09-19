@@ -18,11 +18,11 @@ export async function getStaticProps(context) {
   const path = require('path')
   const fs = require('fs')
   const foundation = fs.readFileSync(path.join('src','mjson','css','foundation.css'), 'utf8')
-  const maha = fs.readFileSync(path.join('src','mjson','css','maha.css'), 'utf8')
+  const emails = fs.readFileSync(path.join('src','mjson','css','emails.css'), 'utf8')
   return {
     props: {
       email,
-      foundation: foundation + maha
+      foundation: foundation + emails
     }
   }
 }

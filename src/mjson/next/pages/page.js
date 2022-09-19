@@ -19,18 +19,11 @@ class Page extends React.Component {
           <link rel="manifest" href="/manifest.json" />
           <meta name="theme-color" content="#FFFFFF" />
           <title>{ page.meta.title }</title>
+          <Style { ...this._getStyle() } />
         </Head>
-        <Style { ...this._getStyle() } />
         <Body { ...this._getBody() } />
       </>
     )
-  }
-
-  _getChildren() {
-    const { config } = this.props
-    return {
-      children: config.content.children
-    }
   }
 
   _getBody() {
