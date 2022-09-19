@@ -5,8 +5,7 @@ import React from 'react'
 class Email extends React.Component {
 
   static propTypes = {
-    email: PropTypes.object,
-    foundation: PropTypes.string
+    form: PropTypes.object
   }
 
   render() {

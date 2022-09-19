@@ -1,7 +1,8 @@
+import Event from '../../../services/mjson/pages/next/event'
 import fetchData from '../../lib/fetch'
 
 export default function Document(props) {
-  return <div>event</div>
+  return <Event { ...props } />
 }
 
 export async function getStaticPaths() {

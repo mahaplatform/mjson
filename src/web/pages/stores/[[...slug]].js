@@ -1,8 +1,10 @@
+import Product from '../../../services/mjson/pages/next/product'
+import Store from '../../../services/mjson/pages/next/store'
 import fetchData from '../../lib/fetch'
 
 export default function Document(props) {
-  if(props.product) return <div>{props.store.title}:{props.product.title}</div>
-  return <div>{props.store.title}</div>
+  if(props.product) return <Product { ...props } />
+  return <Store { ...props } />
 }
 
 export async function getStaticPaths() {

@@ -1,7 +1,8 @@
+import Form from '../../../services/mjson/pages/next/form'
 import fetchData from '../../lib/fetch'
 
 export default function Document(props) {
-  return <div>form</div>
+  return <Form { ...props } />
 }
 
 export async function getStaticPaths() {
